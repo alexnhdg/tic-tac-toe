@@ -13,19 +13,19 @@ print("This game requires two players: one who will be 'X' and one who will\n"
 
 game_on = f.play_game_q("Do you want to play?")
 
-
-
 while game_on:
 
     f.clear()
     
-    # Set up game components
+    # Set up game components.
     game_markers = f.assign_markers()
     game_board = ['#', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+
+    # Initialize game flow control variables.
     player_wins = ['#', False, False]
     positions_available = True
     
-    # Play the game
+    # Play the game.
     while (player_wins[1] == False and player_wins[2] == False) and positions_available:
         for player in range(1,3):
             f.display_board(game_board)
@@ -37,6 +37,7 @@ while game_on:
     
     f.display_board(game_board)
     
+    # Determine the game winner.
     if player_wins[1] == player_wins[2]:
         print("The game is tied! No one wins. Womp.\n")
     elif player_wins[1] == True:

@@ -132,13 +132,3 @@ def check_positions_available(board):
         available_positions.append(board[i] not in ['X', 'O'])
         
     return any(available_positions)
-
-    # return (board[1] not in ['X', 'O'] or
-    #         board[2] not in ['X', 'O'] or
-    #         board[3] not in ['X', 'O'] or
-    #         board[4] not in ['X', 'O'] or
-    #         board[5] not in ['X', 'O'] or
-    #         board[6] not in ['X', 'O'] or
-    #         board[7] not in ['X', 'O'] or
-    #         board[8] not in ['X', 'O'] or
-    #         board[9] not in ['X', 'O'])
